@@ -1,0 +1,11 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <block type="bp_eventset">
+    <value name="COND">
+      <block type="text_startswith">
+        <value name="A">
+          <shadow type="bp_event_name"></shadow>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
