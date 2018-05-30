@@ -1,5 +1,5 @@
 Blockly.defineBlocksWithJsonArray([  
- {
+{
     "type": "bp_event",
     "message0": "BP Event %1",
     "args0": [
@@ -14,8 +14,7 @@ Blockly.defineBlocksWithJsonArray([
 	"colour": 0,
     "tooltip": "A BP Event"
   },
-  
-  {
+{
   "type": "bp_event_of_list",
   "message0": "BP Event %1",
   "args0": [
@@ -33,9 +32,7 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Use this block if you are using the list of BP Events block",
   "helpUrl": ""
 },
- 
-  
-  {
+{
   "type": "bp_event_list",
   "message0": "List of BP Events %1 %2",
   "args0": [
@@ -53,8 +50,7 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "A list of BP Events",
   "helpUrl": ""
 },
-
-  {
+{
   "type": "bp_bsync",
   "message0": "Wait %1 Request %2 Block %3",
   "args0": [
@@ -105,7 +101,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Use this block if you would like to utilize the value returned by the bsync",
   "helpUrl": ""
 },
-
 {
   "type": "bp_register_bthread",
   "message0": "BThread %1 %2",
@@ -125,7 +120,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "A single BThread",
   "helpUrl": ""
 },
-
 {
   "type": "bp_event_name",
   "message0": "The event's name",
@@ -134,7 +128,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "The name of the event considered for selection",
   "helpUrl": ""
 },
-
 {
   "type": "bp_eventset",
   "message0": "All events so that: %1 %2",
@@ -154,7 +147,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Define a predicate over the events' name",
   "helpUrl": ""
 },
-
 {
   "type": "text_startswith",
   "message0": "%1 Starts with %2 %3",
@@ -179,7 +171,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Check whether or not a string begins with another string",
   "helpUrl": ""
 },
-
 {
   "type": "text_concatenate",
   "message0": "%1 + %2 %3",
@@ -204,7 +195,6 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "String concatenation",
   "helpUrl": ""
 },
-
 {
   "type": "text_parseint",
   "message0": "Integer %1",
@@ -219,6 +209,140 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 230,
   "tooltip": "Turn a string to an integer",
   "helpUrl": ""
+},
+
+{
+    "type": "void_function",
+    "message0": "Function %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "NAME",
+            "check": "String"
+        }
+    ],
+    "nextStatement": null,
+    "previousStatement": null,
+    "colour": 230,
+    "tooltip": "call to Java Script function",
+    "helpUrl": ""
+},
+{
+    "type": "function_with_args",
+    "message0": "Function %1 %2 with_args: %3",
+    "args0": [
+    {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "function_name"
+    },
+    {
+        "type": "input_dummy"
+    },
+    {
+        "type": "input_value",
+        "name": "NAME"
+    }
+],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "return_function",
+    "message0": "%1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "Item",
+            "variable": "item"
+        },
+        {
+            "type": "field_input",
+            "name": "NAME",
+            "text": "="
+        },
+        {
+            "type": "input_value",
+            "name": "NAME",
+            "check": "String"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "return_function_with_args",
+    "message0": "%1 %2 %3 with args: %4",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "Item",
+            "variable": "item"
+        },
+        {
+            "type": "field_input",
+            "name": "NAME",
+            "text": "="
+        },
+        {
+            "type": "input_value",
+            "name": "FUNCTION",
+            "check": "String"
+        },
+        {
+            "type": "input_value",
+            "name": "ARGS"
+        }
+    ],
+    "inputsInline": false,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "arg",
+    "message0": "arg: %1",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "arg1",
+            "variable": "item"
+        }
+    ],
+    "output": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "args",
+    "message0": "arg: %1 %2",
+    "args0": [
+    {
+        "type": "field_variable",
+        "name": "arg_i",
+        "variable": "arg_i"
+    },
+    {
+        "type": "input_value",
+        "name": "NAME",
+        "check": "String"
+    }
+],
+    "output": null,
+    "colour": 230,
+    "tooltip": "",
+    "helpUrl": ""
 }
 
   ])
@@ -232,9 +356,7 @@ Blockly.defineBlocksWithJsonArray([
   return [code, Blockly.JavaScript.ORDER_ATOMIC]};
   
   Blockly.JavaScript['bp_event_of_list'] =  Blockly.JavaScript['bp_event']
-  
-  
-  
+
   Blockly.JavaScript['bp_event_list'] = function(block) {
   var events_string = Blockly.JavaScript.valueToCode(block, 'LIST');
   events = breakEventsString(events_string);
@@ -263,13 +385,11 @@ Blockly.defineBlocksWithJsonArray([
 	
 	return result
   };
-  
 
   function getEventName(dirty){
 	return dirty.substring(9,dirty.length-1);//erase the bp.Event(" and the ")
   }	  
-  
-  
+
  Blockly.JavaScript['bp_bsync'] = function(block) {
   var value_wait = Blockly.JavaScript.valueToCode(block, 'WAIT', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
   var value_request = Blockly.JavaScript.valueToCode(block, 'REQUEST', Blockly.JavaScript.ORDER_ATOMIC) || 'null';
@@ -383,7 +503,6 @@ Blockly.JavaScript['bp_register_bthread'] = function(block) {
   return code;
 };
 
-
 Blockly.JavaScript['bp_event_name'] = function(block) {
   var code = 'e.getName()';
   return [code, Blockly.JavaScript.ORDER_NONE];
@@ -423,3 +542,55 @@ Blockly.JavaScript['text_parseint'] = function(block) {
   var code = 'parseInt('+text+')';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['void_function'] = function(block) {
+    var name = eval(Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC));
+
+    var code = name+';\n';
+    return code;
+};
+
+
+Blockly.JavaScript['function_with_args'] = function(block) {
+    var name = eval(Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC));
+
+    var code = name+'\n';
+    return code;
+};
+
+Blockly.JavaScript['return_function'] = function(block) {
+    var variable_item = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('Item'), Blockly.Variables.NAME_TYPE);
+    var text_name = block.getFieldValue('NAME');
+    var value_name = eval(Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC));
+
+    var code = variable_item+' = '+  value_name+';\n';
+    return code;
+};
+
+Blockly.JavaScript['return_function_with_args'] = function(block) {
+    var variable_item = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('Item'), Blockly.Variables.NAME_TYPE);
+    var text_name = block.getFieldValue('NAME');
+    var value_function = eval(Blockly.JavaScript.valueToCode(block, 'FUNCTION', Blockly.JavaScript.ORDER_ATOMIC));
+    var value_args = eval(Blockly.JavaScript.valueToCode(block, 'ARGS', Blockly.JavaScript.ORDER_ATOMIC));
+
+    var code = variable_item+' = '+  value_function+'('+value_args+');\n';
+    return code;
+};
+
+Blockly.JavaScript['arg'] = function(block) {
+    var variable_item = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('arg1'), Blockly.Variables.NAME_TYPE);
+
+    var code = variable_item;
+
+    return code;
+};
+
+Blockly.JavaScript['args'] = function(block) {
+    var variable_arg_i = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('arg_i'), Blockly.Variables.NAME_TYPE);
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+
+    var code =','+variable_arg_i+'';
+    return code;
+};
+
+

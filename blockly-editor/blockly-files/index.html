@@ -388,7 +388,9 @@
 		<!-- <label text=<script>get2ndLabelText()</script> web-class="explanatoryBPLabelStyle"></label> -->
 		<sep gap="20"></sep>
 		<block type="bp_bsync"></block>
-		<block type="bp_bsync_with_output"></block>
+
+
+      <block type="bp_bsync_with_output"></block>
 
 		<label text="And then use that in the following block:" web-class="explanatoryBPLabelStyle"></label>
 		<block type="bp_register_bthread">
@@ -398,6 +400,40 @@
 			 </shadow>
 		  </value>
 		  </block>
+      <label text="Functions:" web-class="explanatoryBPLabelStyle"></label>
+      <block type="void_function">
+        <value name="NAME">
+          <shadow type="text">
+            <field name="TEXT">Your Function name here..</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="function_with_args">
+        <value name="NAME">
+        </value>
+      </block>
+      <block type="return_function">
+        <value name="FUNCTION">
+          <shadow type="text">
+            <field name="TEXT">Your Function name here..</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="return_function_with_args">
+      <value name="NAME">
+        <shadow type="text">
+          <field name="TEXT">Your Function name here..</field>
+        </shadow>
+      </value>
+    </block>
+      <block type="arg">
+        <value name="NAME">
+          <shadow type="text">
+            <field name="TEXT">arg</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="args"></block>
 
     </category>
 	
@@ -406,7 +442,7 @@
     <value name="COND">
       <block type="text_startswith">
         <value name="A">
-          <block type="bp_event_name"></shadow>
+            <block type="bp_event_name"></block>
         </value>
       </block>
     </value>

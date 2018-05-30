@@ -35,7 +35,7 @@ var NONE        = 4,
     DYING       = 10;
 //endregion
 
-const { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {})
+//const { require } = Cu.import("resource://gre/modules/commonjs/toolkit/require.js", {})
 
 var express = require('express');
 var ws = require('ws')
